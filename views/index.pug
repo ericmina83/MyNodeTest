@@ -1,53 +1,23 @@
 doctype html
 html
     head
-        link(rel='stylesheet', href='./css/MyStyle.css')
         title Zou, Jyun-An
-        //link(rel='stylesheet', href='./css/bootstrap.min.css')
+        link(rel='stylesheet', href='./css/MyStyle.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="http://malsup.github.com/jquery.cycle.all.js")
     body
         include ./Header.pug
+        span#elementA(style="display: none;") #{JSON.stringify(coverImages)}
         div.container
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
-            div sadfsdf
-            div sadfsad
+            img.main-img#main-img(src=coverImage)
+            div.about_me
+
+        script(src='./js/MyJS.js')
+        script.
+            var elementA = document.getElementById('elementA');
+            var coverList = JSON.parse(elementA.textContent);
+            console.log(coverList);
+
+
+
+            

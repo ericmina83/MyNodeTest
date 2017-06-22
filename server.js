@@ -1,6 +1,14 @@
+// Naive packages.
+var fs = require('fs');
+
+// 3rd party packages.
+var underscore = require("underscore");
 var express = require("express");
 var pug = require('pug');
 var app = express();
+
+// Set the HTML template.
+app.set('view engine', 'pug');
 
 // Path setting.
 var viewsPath  = __dirname + '/views/';
@@ -10,9 +18,21 @@ app.use(express.static('public'));
 
 // Server initialize.
 app.get("/", function(req, res){
-    var options = {};
-    var html = pug.compileFile(viewsPath + 'index.pug', options);
-    res.send(html());
+    var path = __dirname + '/public/image/';
+    fs.readdir(path, function(err, files) {
+        let imagePathList = files.map(file => {
+            return ('/image/' + file);
+        });
+
+        let randomlyPickOne = underscore.first(underscore.shuffle(imagePathList));
+
+        var data = {
+            'coverImages': imagePathList,
+            'coverImage': randomlyPickOne
+        };
+        res.render(viewsPath + 'index.pug', data);
+    });
+
 });
 
 app.listen(3000, function(){
