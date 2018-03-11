@@ -5,18 +5,38 @@ html
         link(rel='stylesheet', href='./css/MyStyle.css')
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
         script(src="http://malsup.github.com/jquery.cycle.all.js")
+    
     body
-        include ./Header.pug
-        span#elementA(style="display: none;") #{JSON.stringify(coverImages)}
-        div.container
-            img.main-img#main-img(src=coverImage)
-            div.about_me
+    
+        nav.navbar
+            div.navbar-container
+                div.navbar-item.navbar-header#Header Zou, Jyun-An
+                div.navbar-item#AbountMe About Me
+                div.navbar-item#Resume Resume
 
-        script(src='./js/MyJS.js')
-        script.
-            var elementA = document.getElementById('elementA');
-            var coverList = JSON.parse(elementA.textContent);
-            console.log(coverList);
+        div.container
+            div.background.section_title
+                div#im 我是...
+                div#zja ZOU, JYUN-AN
+            
+            div.header About Me
+            div.background.section_about_me
+                //- div#im 我是...
+                //- div#zja ZOU, JYUN-AN
+            
+            div.header Resume
+            div.background.section_resume
+                //- div#im 我是...
+                //- div#zja ZOU, JYUN-AN
+            
+            
+            
+
+        //- script(src='./js/MyJS.js')
+        //- script.
+        //-     var elementA = document.getElementById('elementA');
+        //-     var coverList = JSON.parse(elementA.textContent);
+        //-     console.log(coverList);
 
 
 

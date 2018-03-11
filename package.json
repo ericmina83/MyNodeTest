@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "react-native": "^0.54.0",
     "underscore": "^1.8.3"
   }
 }

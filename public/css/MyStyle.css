@@ -1,36 +1,41 @@
 /* navbar */
-.main-img{
+/* .main-img{
     width: 100%;
     min-width: 700px;
     height: auto;
     border-radius: 10px;
+} */
+
+body{
+    /* display: inline; */
+    padding:0;
+    margin:0;
+}
+
+html{
+    font-family: Microsoft JhengHei;
 }
 
 .navbar-container{
     padding: 20px;
     margin: 0 auto;
 }
-
 .navbar-item{
     cursor: pointer;
     font-size: 18px;
     margin-right: 30px;
     display: inline-table;
 }
-
 .navbar-item.navbar-header{
     font-size: 20px;
     margin-right: 40px;
 }
-
 .navbar-item:hover{
     color: white;
 }
-
 .navbar{
     z-index: 1000;
     position: fixed;
-    min-height: 50px;
     color: #aaa;
     top: 0;
     left: 0;
@@ -38,18 +43,63 @@
     background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
 }
 
-/* body */
-.container{
-    overflow: hidden;
-    border-radius: 15px;
-    max-width: 90%;
-    padding-top: 105px;
-    padding-bottom: 105px;
-    /*border: 3px solid #aaa;*/
-    margin: 0 auto;
+.top_tab{
+    height: 50px;
 }
 
+.container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
 
-.about_me{
+.background{   
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.section_title{
+    position: relative;
+    height: 3000px;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('./../image/title.jpg');
+}
 
+#im{
+    font-size: 200px;
+    position: absolute;
+    top: 1000px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+#zja{
+    font-size: 100px;
+    position: absolute;
+    top: 2000px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.header{
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.section_about_me{
+    position: relative;
+    height: 3000px;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('./../image/about_me.jpg');
+}
+
+.section_resume{
+    position: relative;
+    height: 3000px;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('./../image/resume.jpg');
 }
